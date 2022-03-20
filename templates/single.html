@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Страничка кандидата {{candidate.name}}</title>
+</head>
+<body>
+    {% if "not_found" in %}
+    <h1>{{candidate.not_found}}</h1>
+    {% else %}
+        <h1>Имя кандидата: {{candidate.name}}</h1>
+        <p><em>Позиция кандидата: {{candidate.position}}</em></p>
+        <img src="{{candidate.picture}}" width=200/>
+        <p>Навыки кандидата: {{candidate.skills}}</p>
+    {% endif %}
+</body>
+</html>
