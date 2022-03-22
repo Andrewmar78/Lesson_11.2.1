@@ -35,14 +35,13 @@ def candidate_by_skills(skill_name):
     candidates = []
     for candidate in __all_candidates_datas:
         skills = candidate["skills"].lower().split(", ")
-        if skill_name in skills:
+        if skill_name.lower() in skills:
             candidates.append(candidate)
-            print(candidates)
-            return candidates
+    return candidates
 
 
 # Проверка
 # candidates_json_list("candidates.json")
-profile(3)
+# profile(3)
 profile_by_name("A")
-candidate_by_skills("go")
+candidate_by_skills("Go")

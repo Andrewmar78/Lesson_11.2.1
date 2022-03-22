@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Страничка кандидата {{candidate.name}}</title>
 </head>
 <body>
-    {% if "not_found" in %}
-    <h1>{{candidate.not_found}}</h1>
+    {% if "not_found" in candidate %}
+        <h1>{{candidate.not_found}}</h1>
     {% else %}
         <h1>Имя кандидата: {{candidate.name}}</h1>
         <p><em>Позиция кандидата: {{candidate.position}}</em></p>

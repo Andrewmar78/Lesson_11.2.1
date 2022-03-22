@@ -14,14 +14,14 @@ def main_page():
 
 
 # Страничка данных выбранного по id кандидата, если он есть
-@app.route("/candidate/<int:candidate_id>")
+@app.route("/candidates/<int:candidate_id>")
 def candidate_page(candidate_id):
     candidate = profile(candidate_id)
     return render_template("single.html", candidate=candidate)
 
 
 # Страничка данных выбранного по имени кандидата, если он есть
-@app.route("/search/<int:candidate_id>")
+@app.route("/search/<name>")
 def candidate_page_by_name(name):
     candidates = profile_by_name(name)
     print(candidates)
@@ -32,7 +32,7 @@ def candidate_page_by_name(name):
 @app.route("/skills/<skill>")
 def candidate_by_skills(skill):
     candidates = candidate_by_skills(skill)
-    return render_template("skill.html", candidates=candidates, candidates_length=len(candidates))
+    return render_template("skills.html", candidates=candidates, candidates_length=len(candidates), skill=skill)
 
 
 # Запуск сервера
