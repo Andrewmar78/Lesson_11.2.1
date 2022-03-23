@@ -30,7 +30,7 @@ def candidate_page_by_name(name):
 
 # Страничка списка кандидатов по выбранному навыку, если такой навык есть
 @app.route("/skills/<skill>")
-def candidate_by_skills(skill):
+def candidates_skills(skill):
     candidates = candidate_by_skills(skill)
     return render_template("skills.html", candidates=candidates, candidates_length=len(candidates), skill=skill)
 

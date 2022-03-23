@@ -26,10 +26,11 @@ def profile(candidate_id):
 
 
 def profile_by_name(candidate_name):
+    candidates = []
     for candidate in __all_candidates_datas:
         if candidate_name.lower() in candidate["name"].lower():
-            return candidate
-
+            candidates.append(candidate)
+    return candidates
 
 def candidate_by_skills(skill_name):
     candidates = []
